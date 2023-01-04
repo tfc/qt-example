@@ -7,11 +7,12 @@
   let
     pkgs = nixpkgs.legacyPackages.x86_64-linux;
   in {
-    packages.x86_64-linux.default = pkgs.qt6Packages.callPackage ./build.nix {};
     devShells.x86_64-linux.default = pkgs.mkShell {
-      inputsFrom = [ self.packages.x86_64-linux.default ];
       buildInputs = with pkgs; [
+        cmake
         gdb
+        qt6.full
+        qt6.qtbase
         qtcreator
 
         # this is for the shellhook portion
