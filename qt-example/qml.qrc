@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>qt.svg</file>
+        <file>nix.svg</file>
+    </qresource>
+</RCC>
